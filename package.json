@@ -1,5 +1,14 @@
 {
   "name": "rb",
-  "private": true,
-  "dependencies": {}
+  "description": "The internet store for Russian Brushes",
+  "repository": "https://github.com/frifinger/rb.git",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "env": {
+    "RAILS_ENV": "production",
+    "RACK_ENV": "production",
+    "RAILS_SERVE_STATIC_FILES": "true"
+  },
+  "addons": ["heroku-postgresql"]
 }
